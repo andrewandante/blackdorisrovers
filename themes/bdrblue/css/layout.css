@@ -138,6 +138,7 @@ body {
 /* HEADER */
 .header {
     background: #4085AF;
+		text-transform: lowercase;
 }
 	.header .inner {
 	    padding-top: 45px;
@@ -247,7 +248,7 @@ body {
 	.header .primary li a {
 	    color: #ddd;
 	    font-size: 15px;
-	    font-family: Helvetica, Arial, sans-serif;
+	    font-family: "Georgia", serif;
 	    padding: 6px 8px;
 	    font-weight: bold;
 	    display: block;
@@ -309,7 +310,7 @@ body {
 	    font-size: 20px;
 	    color: #AAA;
 	    margin: 0 0 8px 0;
-	    font-family: "CamboRegular", Georgia, "Times New Roman", Times, serif;
+	    font-family: "Georgia", serif;
 	    font-weight: normal;
 	}
 	.main .secondary {
@@ -350,7 +351,7 @@ body {
 		    color: #333;
 		    line-height: 17px;
 		    border-bottom: none;
-		    font-family: 'Lucida Sans', 'Lucida Grande', Arial, Helvetica, sans-serif;
+		    font-family: "Georgia", serif;
 		}
 		.main .secondary li .text {
 		    padding-left: 28px;

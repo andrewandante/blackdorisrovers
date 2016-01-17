@@ -2,7 +2,7 @@
 	<div class="inner">
 		<div class="unit size4of4 lastUnit">
 			<a href="$BaseHref" class="brand" rel="home">
-				<img class="logo" src="assets/bdrlogo.png">
+				<img class="logo" src="$SiteConfig.Logo.Link">
 				<h1>$SiteConfig.Title</h1>
 				<% if $SiteConfig.Tagline %>
 				<p>$SiteConfig.Tagline</p>
