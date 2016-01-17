@@ -12,3 +12,6 @@ _ss_environment.php
 
 /cms/
 /framework/
+/reports/
+/siteconfig/
+/themes/simple/
