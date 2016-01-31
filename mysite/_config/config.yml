@@ -13,3 +13,7 @@ SSViewer:
 SiteConfig:
   extensions:
     - LogoExtension
+
+Calendar:
+  extensions:
+    - ImportICSExtension
