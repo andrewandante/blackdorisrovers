@@ -4,12 +4,12 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "03a8cd02346a7fa5ab6948c0b1adf80b",
-    "content-hash": "e92979d79bcf89dc1db5fc690abdbabf",
+    "hash": "ca71f0038fcf8fc4e2c2f48ac0f0d16a",
+    "content-hash": "aa54b3b402568671f9b1680c8ac846f9",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.23",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
@@ -106,6 +106,46 @@
             "time": "2016-01-27 12:54:22"
         },
         {
+            "name": "mediabeast/fancy-devbuild",
+            "version": "v1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mediabeastnz/silverstripe-fancy-devbuild.git",
+                "reference": "3485b7955f72acaf35a946f650c590707104403c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mediabeastnz/silverstripe-fancy-devbuild/zipball/3485b7955f72acaf35a946f650c590707104403c",
+                "reference": "3485b7955f72acaf35a946f650c590707104403c",
+                "shasum": ""
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "screenshots": []
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Myles Beardsmore",
+                    "email": "mediabeastnz@gmail.com"
+                }
+            ],
+            "description": "Simple SilverStripe module to trigger a dev/build via ajax",
+            "homepage": "https://github.com/mediabeastnz/silverstripe-fancy-devbuild",
+            "keywords": [
+                "admin",
+                "build",
+                "dev",
+                "mediabeast",
+                "silverstripe",
+                "tool"
+            ],
+            "time": "2016-02-05 00:55:29"
+        },
+        {
             "name": "silverstripe/cms",
             "version": "3.3.0-beta1",
             "source": {
@@ -158,49 +198,6 @@
                 "silverstripe"
             ],
             "time": "2015-12-23 00:22:38"
-        },
-        {
-            "name": "silverstripe/event-calendar",
-            "version": "1.0.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/unclecheese/silverstripe-event-calendar.git",
-                "reference": "d88d48092de751b5f36f204f4b0ff00dfb7aef2d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-event-calendar/zipball/d88d48092de751b5f36f204f4b0ff00dfb7aef2d",
-                "reference": "d88d48092de751b5f36f204f4b0ff00dfb7aef2d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "silverstripe/cms": ">=3.1",
-                "silverstripe/framework": ">=3.1"
-            },
-            "replace": {
-                "silverstripe/event-calendar": "*"
-            },
-            "type": "silverstripe-module",
-            "extra": {
-                "installer-name": "event_calendar"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Aaron Carlino",
-                    "homepage": "http://leftandmain.com"
-                }
-            ],
-            "description": "Event Calendar for the SilverStripe CMS",
-            "keywords": [
-                "events",
-                "silverstripe"
-            ],
-            "time": "2015-02-18 21:34:57"
         },
         {
             "name": "silverstripe/framework",
@@ -347,12 +344,58 @@
                 "siteconfig"
             ],
             "time": "2015-12-23 00:22:38"
+        },
+        {
+            "name": "unclecheese/event-calendar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/andrewandante/silverstripe-event-calendar.git",
+                "reference": "28534183aae946308702994ef29578d652cd0c54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/andrewandante/silverstripe-event-calendar/zipball/28534183aae946308702994ef29578d652cd0c54",
+                "reference": "28534183aae946308702994ef29578d652cd0c54",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "silverstripe/cms": ">=3.1",
+                "silverstripe/framework": ">=3.1"
+            },
+            "replace": {
+                "silverstripe/event-calendar": "*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "event_calendar"
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Carlino",
+                    "homepage": "http://leftandmain.com"
+                }
+            ],
+            "description": "Event Calendar for the SilverStripe CMS",
+            "keywords": [
+                "events",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/unclecheese/silverstripe-event-calendar/issues",
+                "source": "https://github.com/andrewandante/silverstripe-event-calendar/tree/master"
+            },
+            "time": "2016-02-08 02:28:51"
         }
     ],
     "packages-dev": [
         {
             "name": "phpunit/php-code-coverage",
-            "version": "1.2.18",
+            "version": "1.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
@@ -413,7 +456,7 @@
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "1.4.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
@@ -592,7 +635,7 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "3.7.38",
+            "version": "3.7.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
@@ -665,26 +708,34 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "1.2.3",
+            "version": "1.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "5794e3c5c5ba0fb037b11d8151add2a07fa82875"
+                "reference": "c39c4511c3b007539eb170c32cbc2af49a07351a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/5794e3c5c5ba0fb037b11d8151add2a07fa82875",
-                "reference": "5794e3c5c5ba0fb037b11d8151add2a07fa82875",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/c39c4511c3b007539eb170c32cbc2af49a07351a",
+                "reference": "c39c4511c3b007539eb170c32cbc2af49a07351a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
                 "phpunit/php-text-template": ">=1.1.1@stable"
             },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*@dev"
+            },
             "suggest": {
                 "ext-soap": "*"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
             "autoload": {
                 "classmap": [
                     "PHPUnit/"
@@ -710,20 +761,20 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2013-01-13 10:24:48"
+            "time": "2014-02-16 12:43:56"
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.2",
+            "version": "2.8.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "34c8a4b51e751e7ea869b8262f883d008a2b81b8"
+                "reference": "33fd1b2cfdde601704665fad343014bba04b0753"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/34c8a4b51e751e7ea869b8262f883d008a2b81b8",
-                "reference": "34c8a4b51e751e7ea869b8262f883d008a2b81b8",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/33fd1b2cfdde601704665fad343014bba04b0753",
+                "reference": "33fd1b2cfdde601704665fad343014bba04b0753",
                 "shasum": ""
             },
             "require": {
@@ -759,13 +810,15 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-01-13 10:28:07"
+            "time": "2016-02-02 09:49:18"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
-    "prefer-stable": true,
+    "stability-flags": {
+        "unclecheese/event-calendar": 20
+    },
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.3"

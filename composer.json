@@ -1,16 +1,23 @@
 {
 	"name": "silverstripe/installer",
 	"description": "The SilverStripe Framework Installer",
+	"require-dev": {
+		"phpunit/PHPUnit": "~3.7"
+	},
+	"repositories":	[
+		{
+			"type": "vcs",
+			"url": "git@github.com:andrewandante/silverstripe-event-calendar"
+		}
+	],
 	"require": {
+		"unclecheese/event-calendar": "dev-master",
 		"php": ">=5.3.3",
 		"silverstripe/cms": "3.3.0-beta1",
 		"silverstripe/framework": "3.3.0-beta1",
 		"silverstripe/reports": "3.3.0-beta1",
 		"silverstripe/siteconfig": "3.3.0-beta1",
-		"silverstripe/event-calendar": "^1.0"
-	},
-	"require-dev": {
-		"phpunit/PHPUnit": "~3.7"
+		"mediabeast/fancy-devbuild": "1.*"
 	},
 	"extra": {
 		"branch-alias": {
@@ -20,6 +27,6 @@
 	"config": {
 		"process-timeout": 600
 	},
-	"prefer-stable": true,
+	"prefer-stable": false,
 	"minimum-stability": "dev"
 }

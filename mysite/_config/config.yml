@@ -13,3 +13,12 @@ SSViewer:
 SiteConfig:
   extensions:
     - LogoExtension
+
+Calendar:
+  jquery_included: true
+  timezone: Pacific/Auckland
+  language: EN
+
+CalendarEvent:
+  extensions:
+    - AttendanceExtension
