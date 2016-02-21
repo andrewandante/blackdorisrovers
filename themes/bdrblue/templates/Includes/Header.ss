@@ -16,5 +16,8 @@
 			<% end_if %>
 			<% include Navigation %>
 		</div>
+		<% if $CurrentMember %>
+		<h3 style="color: darkred; float:left; padding-left:40px">Logged in as $CurrentMember.FirstName</h3>
+		<% end_if %>
 	</div>
 </header>
