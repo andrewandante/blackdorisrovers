@@ -21,16 +21,42 @@ class Season_Controller extends Calendar_Controller {
     'SyncButton'
   ); 
   
-  public function LatestResults() {
+  public function getEventList($start, $end, $filter = null, $limit = null) {
+
+		$eventList = new ArrayList();
+
+		foreach($this->getAllCalendars() as $calendar) {
+			if($events = $calendar->getStandardEvents($start, $end, $filter)) {
+				$eventList->merge($events);
+			}
+
+		}
+
+		$eventList = $eventList->sort(array("StartDate" => "ASC", "StartTime" => "ASC"));
+		$eventList = $eventList->limit($limit);
+
+		return $eventList;
+	}
+
+  public function getLatestResults() {
+    $begins = SS_Datetime::now();
     $results = $this->data()->getEventList(
-      SS_Datetime::create(),
-      SS_Datetime::now(),
-      null,
-      null,
-      null
-    );
-    return $results->sort('StartDate', 'DESC')->Limit($this->DefaultPreviousResults)->sort('StartDate');
-    
+      $begins->setValue(0),
+      SS_Datetime::now()
+    )->sort('StartDate', 'DESC');
+    $latestevents = ArrayList::create();
+    foreach ($results as $result) {
+      $id = $result->EventID;
+      $match = Match::get()->byid($id);
+      if ($match->Result) {
+        $latestevents->push($match);
+      }
+      if ($latestevents->count() == $this->DefaultPreviousResults) {
+        break;
+      }
+    }
+    // var_dump($latestevents); die();
+    return $latestevents->sort('UID');
   }
   
   public function SyncButton() {
@@ -44,7 +70,7 @@ class Season_Controller extends Calendar_Controller {
       );
 			
       $form = Form::create($this, 'SyncButton', $fields, $actions);
-      $form->LastSyncDate = SS_Datetime::now();
+      $form->loadDataFrom($this->data());
       
 			return $form;
 	}
@@ -79,7 +105,7 @@ class Season_Controller extends Calendar_Controller {
           $feedevent->Opposition = trim(implode(" ", $opp));
         }
         
-        if ( isset($event['DESCRIPTION']) && !empty($event['DESCRIPTION']) && $event['DESCRIPTION'] != "") {
+        if (isset($event['DESCRIPTION']) && !empty($event['DESCRIPTION']) && $event['DESCRIPTION'] != " ") {
           
           $scores = str_replace("Result\n", "", $event['DESCRIPTION']);
           $scores = explode("-", $scores);
@@ -101,9 +127,9 @@ class Season_Controller extends Calendar_Controller {
             $feedevent->Result = 'Draw';
           }
         } else{
-          $feedevent->BDRScore = null;
-          $feedevent->OppositionScore = null;
-          $feedevent->Result = null;
+          $feedevent->BDRScore = NULL;
+          $feedevent->OppositionScore = NULL;
+          $feedevent->Result = NULL;
         }
 
         $startdatetime = $this->iCalDateToDateTime($event['DTSTART']);
@@ -120,8 +146,8 @@ class Season_Controller extends Calendar_Controller {
           $new = true;
         } else {
           $cdt = $feedevent->DateTimes()->First();
-          $new = false;
         }
+        
         $cdt->StartDate = $startdatetime->format('Y-m-d');
         $cdt->StartTime = $startdatetime->format('H:i:s');
 
@@ -145,9 +171,10 @@ class Season_Controller extends Calendar_Controller {
     
     $form->sessionMessage('Sync Succeeded', 'good');
 
-    $this->LastSyncDate = SS_datetime::now();
-    $this->write();
-    $this->publish('Stage', 'Live');
+    $data = $this->data();
+    $data->LastSyncDate = date("Y-m-d H:i:s");
+    $data->write();
+    $data->publish('Stage', 'Live');
 
     return $this->redirectBack();
   }
