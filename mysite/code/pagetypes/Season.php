@@ -55,7 +55,6 @@ class Season_Controller extends Calendar_Controller {
         break;
       }
     }
-    // var_dump($latestevents); die();
     return $latestevents->sort('UID');
   }
   

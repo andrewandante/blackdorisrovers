@@ -17,7 +17,9 @@
 		"silverstripe/framework": "3.3.0-beta1",
 		"silverstripe/reports": "3.3.0-beta1",
 		"silverstripe/siteconfig": "3.3.0-beta1",
-		"mediabeast/fancy-devbuild": "1.*"
+		"mediabeast/fancy-devbuild": "1.*",
+		"silverstripe/crontask": "^1.1",
+		"silverstripe/dynamodb": "^2.0"
 	},
 	"extra": {
 		"branch-alias": {

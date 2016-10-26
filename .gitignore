@@ -15,4 +15,6 @@ _ss_environment.php
 /reports/
 /siteconfig/
 /event_calendar/
+/crontask/
+/silverstripe-dynamodb/
 /fancy-devbuild/
