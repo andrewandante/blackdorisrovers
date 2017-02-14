@@ -13,11 +13,11 @@
 	"require": {
 		"unclecheese/event-calendar": "dev-master",
 		"php": ">=5.3.3",
-		"silverstripe/cms": "3.3.0-beta1",
-		"silverstripe/framework": "3.3.0-beta1",
-		"silverstripe/reports": "3.3.0-beta1",
-		"silverstripe/siteconfig": "3.3.0-beta1",
-		"mediabeast/fancy-devbuild": "1.*",
+		"silverstripe/cms": "^3.3.0",
+		"silverstripe/framework": "^3.3.0",
+		"silverstripe/reports": "^3.3.0",
+		"silverstripe/siteconfig": "^3.3.0",
+		"mediabeast/fancy-devbuild": "^1.0",
 		"silverstripe/crontask": "^1.1",
 		"silverstripe/dynamodb": "^2.0"
 	},
@@ -29,6 +29,6 @@
 	"config": {
 		"process-timeout": 600
 	},
-	"prefer-stable": false,
+	"prefer-stable": true,
 	"minimum-stability": "dev"
 }
